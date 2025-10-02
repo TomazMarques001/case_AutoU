@@ -17,7 +17,7 @@ def ia_classify_produtividade_categoria_openai(text, api_key):
         "messages": [{
             "role": "user",
             "content": (
-                "Analise o texto abaixo e responda em formato JSON com duas chaves: 'produtividade' (número de 0 a 5, onde 0 é improdutivo e 5 é muito produtivo) e 'categoria' (uma das opções: RH, Financeiro, Operacional, Parcerias, Burocrático).\n"
+                "Analise o texto abaixo e responda em formato JSON com duas chaves: 'produtividade' (uma das: \"Totalmente improdutivo\",\"Muito improdutivo\",\"Baixa prioridade\",\"Média importância\",\"Importante\",\"Alta prioridade\") e 'categoria' (uma das opções: RH, Financeiro, Operacional, Parcerias, Burocrático).\n"
                 "Apenas retorne o JSON.\n\nTexto:\n" + text
             )
         }]
